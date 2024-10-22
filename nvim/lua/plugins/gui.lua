@@ -16,6 +16,7 @@ return {
     "nvim-neo-tree/neo-tree.nvim",
     opts = function(_, opts)
       return {
+        popup_border_style = "solid",
         default_component_configs = {
           indent = {
             indent_marker = " ",
@@ -33,8 +34,8 @@ return {
                 local name = node.type == "terminal" and "terminal" or node.name
                 if success then
                   local devicon, hl = web_devicons.get_icon(name)
-                  icon.text = (devicon or icon.text)
-                  -- icon.text = ""
+                  -- icon.text = (devicon or icon.text)
+                  icon.text = "|"
                   icon.highlight = hl or icon.highlight
                 end
               end
