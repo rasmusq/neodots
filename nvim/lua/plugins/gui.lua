@@ -2,6 +2,17 @@ return {
   { "nvim-lualine/lualine.nvim", enabled = false },
   { "akinsho/bufferline.nvim", enabled = false },
   {
+    "folke/noice.nvim",
+    opts = {
+      presets = {
+        bottom_search = true,
+      },
+      cmdline = {
+        view = "cmdline",
+      },
+    },
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = function(_, opts)
       return {
